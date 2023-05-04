@@ -1,6 +1,6 @@
 package com.ejemplo.SpringB.service.implement;
 
-import com.ejemplo.SpringB.model.PersonaDTO;
+import com.ejemplo.SpringB.model.Persona;
 import com.ejemplo.SpringB.repository.PersonaRepository;
 import com.ejemplo.SpringB.service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,22 +19,22 @@ public class PersonaServiceImp implements PersonaService {
     }
 
     @Override
-    public PersonaDTO getPersona(Long id) {
+    public Persona getPersona(Long id) {
         return personaRepository.findById(id).orElse(null);
     }
 
     @Override
-    public List<PersonaDTO> verPersonas() {
+    public List<Persona> verPersonas() {
         return personaRepository.findAll();
     }
 
     @Override
-    public PersonaDTO createPersona(PersonaDTO persona) {
+    public Persona createPersona(Persona persona) {
         return personaRepository.save(persona);
     }
 
     @Override
-        public PersonaDTO deletePersona(Long id) {
+        public Persona deletePersona(Long id) {
             personaRepository.deleteById(id);
         return null;
     }

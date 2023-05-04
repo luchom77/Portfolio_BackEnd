@@ -1,19 +1,18 @@
 package com.ejemplo.SpringB.service;
 
-import com.ejemplo.SpringB.model.PersonaDTO;
-import org.hibernate.event.internal.DefaultPersistOnFlushEventListener;
+import com.ejemplo.SpringB.model.Persona;
 
 import java.util.List;
 
 public interface PersonaService {
 
-    PersonaDTO getPersona(Long id);
+    Persona getPersona(Long id);
 
-    List<PersonaDTO> verPersonas();
+    List<Persona> verPersonas();
 
-    PersonaDTO createPersona(PersonaDTO persona);
+    Persona createPersona(Persona persona);
 
-    PersonaDTO deletePersona(Long id);
+    Persona deletePersona(Long id);
 
 
 
