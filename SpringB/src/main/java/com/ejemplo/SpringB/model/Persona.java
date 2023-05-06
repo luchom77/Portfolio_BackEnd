@@ -11,14 +11,14 @@ import lombok.*;
 @Getter @Setter //esto sirve para no tener que poner todos los setters y getters
 @Entity
 @Table(name="persona")
-public class PersonaDTO {
+public class Persona {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String nombre;
     private String apellido;
-
+    private String profesion;
     private String origen;
     private String fecha_nac;
     private String sobre_mi;
@@ -28,11 +28,7 @@ public class PersonaDTO {
     @Email
     private String correo;
     private String url_foto;
-    private String usuario;
 
-    @NotBlank
-    @NotNull
-    private String contrasena;
 
 
 }
