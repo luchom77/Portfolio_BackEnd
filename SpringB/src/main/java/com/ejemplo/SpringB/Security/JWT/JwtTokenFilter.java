@@ -5,6 +5,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,9 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+//@Slf4j : para el logger
 public class JwtTokenFilter extends OncePerRequestFilter {
-    private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
+   private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
 
     @Autowired
     JwtProvider jwtProvider;
@@ -41,8 +43,8 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
     private String getToken(HttpServletRequest request){
         String header = request.getHeader("Authorization");
-        if(header != null && header.startsWith("Bearer"))
-            return header.replace("Bearer", "");
+        if(header != null && header.startsWith("Bearer")){
+            return header.replace("Bearer", "");} //tener en cuenta el espacio despues del bearer
         return null;
     }
 }

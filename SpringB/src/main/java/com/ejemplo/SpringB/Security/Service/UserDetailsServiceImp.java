@@ -1,5 +1,7 @@
 package com.ejemplo.SpringB.Security.Service;
 
+import com.ejemplo.SpringB.Security.Entity.Usuario;
+import com.ejemplo.SpringB.Security.Entity.UsuarioPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

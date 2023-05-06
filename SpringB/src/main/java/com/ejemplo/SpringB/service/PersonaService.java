@@ -15,5 +15,4 @@ public interface PersonaService {
     Persona deletePersona(Long id);
 
 
-
 }

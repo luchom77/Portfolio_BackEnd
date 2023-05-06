@@ -2,7 +2,7 @@ package com.ejemplo.SpringB.Security.Entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-
+import com.ejemplo.SpringB.Security.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -38,4 +38,5 @@ public class Usuario {
         this.email = email;
         this.password = password;
     }
+
 }

@@ -28,11 +28,7 @@ public class Persona {
     @Email
     private String correo;
     private String url_foto;
-    private String usuario;
 
-    @NotBlank
-    @NotNull
-    private String contrasena;
 
 
 }

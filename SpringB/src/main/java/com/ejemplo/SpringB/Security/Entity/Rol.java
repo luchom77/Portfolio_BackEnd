@@ -15,7 +15,6 @@ public class Rol {
 
     //Constructor
     public Rol(){
-
     }
     public Rol(RolNombre rolNombre) {
         this.rolNombre = rolNombre;
